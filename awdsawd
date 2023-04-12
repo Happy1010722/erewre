@@ -1,0 +1,34 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Fucking Happy Script By Happy101", "DarkTheme")
+
+--TEST
+local Test = Window:NewTab("Test")
+local TestSection = Test:NewSection("Test")
+
+
+TestSection:NewButton("Test (Print Hi)", "just for test", function()
+    print("Hi")
+end)
+
+
+--PSX
+local PSX = Window:NewTab("PSX")
+local PSXSection = PSX:NewSection("PSX")
+
+
+PSXSection:NewButton("Auto Merch)", "OP PSX SCRIPT", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/wumatssecretlover/verycoolstuff/main/ong"))()
+end)
+
+PSXSection:NewButton("Partner Tag)", "OP PSX SCRIPT", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/troyeze/PSX/main/PartnerTag"))()
+end)
+
+
+--PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "SliderInfo", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
